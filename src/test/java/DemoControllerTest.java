@@ -11,4 +11,14 @@ class DemoControllerTest {
          String response = controller.hello();
          assertEquals("Hello, World!", response);
      }
+
+    @Test
+    void testHelloWithDifferentMessage() {
+        assertDoesNotThrow(
+            () -> {
+                String response = controller.hello();
+                assertEquals("Hello, World!", response);
+            }
+        );
+    }
 }
